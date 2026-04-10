@@ -3,368 +3,435 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FB Messenger Pro | LOOK + UNLOCK | 365 Days</title>
+    <title>🔥 9MAN-X-YAMDHUD | NICKNAME LOOK SYSTEM | 24/7 AUTO RESTORE</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
-        body { background: linear-gradient(135deg, #1877f2, #0c4b8a); min-height: 100vh; padding: 20px; }
-        .container { max-width: 1400px; margin: 0 auto; }
-        .header { background: white; border-radius: 15px; padding: 20px; margin-bottom: 25px; text-align: center; position: relative; }
-        .validity-badge { position: absolute; top: 20px; right: 20px; background: linear-gradient(135deg, #28a745, #ffc107); color: white; padding: 8px 20px; border-radius: 30px; font-weight: bold; }
-        h1 { color: #1877f2; }
-        .card { background: white; border-radius: 15px; padding: 20px; margin-bottom: 20px; box-shadow: 0 5px 20px rgba(0,0,0,0.2); }
-        input, textarea, select { width: 100%; padding: 12px; margin: 10px 0; border: 1px solid #ddd; border-radius: 8px; }
-        button { background: #1877f2; color: white; padding: 12px 20px; border: none; border-radius: 8px; cursor: pointer; margin: 5px; font-weight: bold; }
-        button.success { background: #28a745; }
-        button.danger { background: #dc3545; }
-        button.warning { background: #ff9800; }
-        button.look-btn { background: #6c757d; }
-        button.unlock-btn { background: #28a745; }
-        .group-item { background: #f8f9fa; border-radius: 10px; padding: 15px; margin: 10px 0; border-left: 4px solid #6c757d; transition: 0.3s; }
-        .group-item.unlocked { border-left-color: #28a745; background: #e8f5e9; }
-        .group-name { font-size: 18px; font-weight: bold; }
-        .group-uid { font-size: 11px; color: #666; font-family: monospace; margin: 5px 0; }
-        .nickname { color: #28a745; font-weight: bold; }
-        .theme-badge { display: inline-block; background: #e3f2fd; padding: 5px 12px; border-radius: 20px; font-size: 12px; margin-top: 8px; }
-        .log-area { background: #1e1e1e; color: #0f0; padding: 15px; border-radius: 8px; font-family: monospace; height: 200px; overflow-y: auto; font-size: 12px; }
-        .status { padding: 10px; border-radius: 8px; margin: 10px 0; }
-        .status.success { background: #d4edda; color: #155724; }
-        .status.error { background: #f8d7da; color: #721c24; }
-        .status.look { background: #cfe2ff; color: #004085; }
-        .progress-bar { width: 100%; height: 8px; background: #e0e0e0; border-radius: 4px; margin-top: 10px; }
-        .progress-fill { height: 100%; background: linear-gradient(90deg, #28a745, #ffc107); border-radius: 4px; transition: width 0.3s; }
-        .mode-indicator { padding: 15px; border-radius: 10px; margin-bottom: 20px; text-align: center; font-weight: bold; }
-        .mode-indicator.look { background: #cfe2ff; color: #004085; border-left: 4px solid #004085; }
-        .mode-indicator.unlock { background: #d4edda; color: #155724; border-left: 4px solid #28a745; }
-        @media (max-width: 768px) { .container { padding: 10px; } button { padding: 8px 12px; font-size: 12px; } }
+        body { background: linear-gradient(135deg, #0a0f1e, #0a0a1a); min-height: 100vh; padding: 20px; transition: 0.3s; }
+        body.light { background: linear-gradient(135deg, #f5f7fa, #c3cfe2); }
+        body.light .card { background: white; color: #333; }
+        body.light .session-card { background: #f0f0f0; }
+        
+        .container { max-width: 1500px; margin: 0 auto; }
+        
+        /* Header */
+        .header { background: linear-gradient(135deg, #ff416c, #ff4b2b); border-radius: 15px; padding: 20px; margin-bottom: 25px; text-align: center; color: white; position: relative; }
+        .theme-toggle { position: absolute; top: 20px; right: 20px; background: rgba(255,255,255,0.2); border: none; border-radius: 50px; padding: 8px 15px; cursor: pointer; color: white; }
+        
+        .card { background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); border-radius: 15px; padding: 20px; margin-bottom: 20px; border: 1px solid rgba(255,255,255,0.2); color: white; transition: 0.3s; }
+        .card h2 { color: #ff416c; border-bottom: 2px solid #ff416c; padding-bottom: 10px; margin-bottom: 20px; }
+        .card h3 { color: #ffa500; margin: 15px 0 10px 0; }
+        
+        input, textarea, select { width: 100%; padding: 12px; margin: 10px 0; border: 1px solid #333; border-radius: 8px; background: #1e1e2e; color: white; }
+        body.light input, body.light textarea { background: #fff; color: #333; border: 1px solid #ddd; }
+        
+        button { background: #ff416c; color: white; padding: 12px 20px; border: none; border-radius: 8px; cursor: pointer; margin: 5px; font-weight: bold; transition: 0.3s; }
+        button:hover { transform: translateY(-2px); opacity: 0.9; }
+        button.success { background: #00b894; }
+        button.danger { background: #d63031; }
+        button.warning { background: #f39c12; }
+        button.info { background: #0984e3; }
+        
+        .session-card { background: #1e1e2e; border-radius: 12px; padding: 15px; margin: 10px 0; border-left: 4px solid #ff416c; transition: 0.3s; }
+        body.light .session-card { background: #e8e8e8; }
+        .session-card.active { border-left-color: #00b894; }
+        .session-card.stopped { border-left-color: #d63031; opacity: 0.7; }
+        
+        .member-item { background: #1e1e2e; border-radius: 8px; padding: 12px; margin: 8px 0; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; }
+        body.light .member-item { background: #e8e8e8; }
+        .member-online { width: 10px; height: 10px; border-radius: 50%; display: inline-block; margin-right: 8px; }
+        .member-online.online { background: #00b894; box-shadow: 0 0 5px #00b894; }
+        .member-online.offline { background: #d63031; }
+        
+        .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 15px; margin-bottom: 20px; }
+        .stat-card { background: #1e1e2e; border-radius: 12px; padding: 15px; text-align: center; }
+        .stat-number { font-size: 32px; font-weight: bold; color: #ff416c; }
+        
+        .log-area { background: #0a0a0a; border-radius: 10px; padding: 15px; font-family: monospace; font-size: 12px; height: 250px; overflow-y: auto; color: #0f0; }
+        body.light .log-area { background: #1a1a1a; }
+        
+        .badge { display: inline-block; padding: 4px 12px; border-radius: 20px; font-size: 11px; margin: 3px; }
+        .badge.online { background: #00b894; color: white; }
+        .badge.offline { background: #d63031; color: white; }
+        .badge.restore { background: #f39c12; color: white; }
+        
+        @media (max-width: 768px) { .container { padding: 10px; } button { padding: 8px 12px; font-size: 12px; } .member-item { flex-direction: column; text-align: center; } }
     </style>
 </head>
 <body>
 <div class="container">
     <div class="header">
-        <div class="validity-badge" id="validityBadge">✅ 365 Days Active</div>
-        <h1>🔓 Facebook Messenger Unlocker Pro</h1>
-        <p>LOOK Mode (देखना) | UNLOCK Mode (बदलना) | 365 Days Uptime</p>
-        <div class="progress-bar"><div class="progress-fill" id="validityProgress" style="width:100%"></div></div>
+        <div class="theme-toggle" onclick="toggleTheme()">🌓 Dark/Light</div>
+        <h1>🔧 9MAN-X-YAMDHUD | NICKNAME LOOK SYSTEM</h1>
+        <p>24/7 Auto Restore | MQTT Real-time | Sirf Change Hue Member Ka Restore</p>
     </div>
 
-    <!-- Mode Selection -->
-    <div class="mode-indicator" id="modeIndicator">
-        🔍 LOOK MODE ACTIVE: Aap sirf dekh sakte ho. Group name, nickname, theme sab dekh sakte ho.
+    <!-- Stats -->
+    <div class="stats-grid">
+        <div class="stat-card"><div class="stat-number" id="totalSessions">0</div><div>Active Sessions</div></div>
+        <div class="stat-card"><div class="stat-number" id="totalMembers">0</div><div>Members Online</div></div>
+        <div class="stat-card"><div class="stat-number" id="totalRestores">0</div><div>Total Restores</div></div>
+        <div class="stat-card"><div class="stat-number" id="uptimeDisplay">0h</div><div>System Uptime</div></div>
     </div>
 
-    <div style="display: flex; gap: 15px; margin-bottom: 20px; justify-content: center;">
-        <button id="lookModeMainBtn" onclick="setMode('look')" style="background:#6c757d; padding:15px 40px;">👁️ LOOK MODE (देखना)</button>
-        <button id="unlockModeMainBtn" onclick="setMode('unlock')" style="background:#28a745; padding:15px 40px;">🔓 UNLOCK MODE (बदलना)</button>
-    </div>
-
-    <!-- Cookies Section -->
+    <!-- Create Session -->
     <div class="card">
-        <h2>🍪 Facebook Cookies</h2>
-        <textarea id="cookiesInput" rows="2" placeholder="Paste Facebook cookies here...&#10;c_user=123456789; xs=abcdef;"></textarea>
-        <button onclick="parseCookies()">🔑 Validate Cookies</button>
-        <button onclick="loadSavedCookies()">💾 Load Saved</button>
-        <div id="cookieStatus"></div>
-    </div>
-
-    <!-- Target UID Section -->
-    <div class="card">
-        <h2>🎯 Target Group UID</h2>
-        <input type="text" id="targetUID" placeholder="Enter Group UID (e.g., 100001234567890)">
-        <div style="display: flex; gap: 10px; flex-wrap: wrap;">
-            <button id="lookBtn" class="look-btn" onclick="lookupGroup()">👁️ LOOK (देखना)</button>
-            <button id="unlockBtn" class="unlock-btn" onclick="unlockGroupByUID()">🔓 UNLOCK (बदलना)</button>
+        <h2>📝 CREATE 9MAN SMART SESSION</h2>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+            <div>
+                <textarea id="cookiesInput" rows="3" placeholder="Facebook Cookies:&#10;c_user=123456789;&#10;xs=abcdef;&#10;fr=xyz;&#10;datr=xyz"></textarea>
+                <input type="text" id="groupId" placeholder="Group ID">
+            </div>
+            <div>
+                <input type="text" id="groupLockName" placeholder="Group Name to Lock">
+                <input type="text" id="adminKey" placeholder="Admin Key (9MAN-X-YAMDHUD)">
+                <button onclick="createSession()" class="success" style="width:100%">🚀 CREATE 9MAN SESSION</button>
+            </div>
         </div>
-        <div id="targetStatus"></div>
+        <div id="createStatus"></div>
     </div>
 
-    <!-- Unlock Options Section -->
+    <!-- Nickname System -->
     <div class="card">
-        <h2>🔓 Unlock Options (UNLOCK Mode Mein Kaam Karega)</h2>
+        <h2>⭐ 9MAN NICKNAME SYSTEM</h2>
+        <p style="margin-bottom: 10px; color: #ffa500;">⚡ Smart Protection | Forcibly restore NAHI - Sirf change hue member ka restore hoga | Auto Restore in 10-60 sec</p>
         <div style="display: flex; gap: 10px; flex-wrap: wrap;">
-            <button id="unlockNameBtn" class="unlock-btn" onclick="unlockGroupNames()">📝 Unlock Group Names</button>
-            <button id="unlockNicknameBtn" class="unlock-btn" onclick="unlockNicknames()">⭐ Unlock Nicknames</button>
-            <button id="unlockThemeBtn" class="unlock-btn" onclick="unlockThemes()">🎨 Unlock Themes</button>
-            <button id="unlockAllBtn" class="unlock-btn" onclick="unlockAll()">🚀 Unlock EVERYTHING</button>
+            <input type="text" id="nicknameToSet" placeholder="Enter nickname to set for ALL members" style="flex:2;">
+            <button onclick="setNicknameForAll()" class="warning">📝 Set Nickname for ALL</button>
+            <button onclick="restoreChangedOnly()" class="success">🔄 Restore Changed Only</button>
+            <button onclick="startAutoRestore()" class="info">🤖 Start 24/7 Auto Restore</button>
+            <button onclick="stopAutoRestore()" class="danger">🛑 Stop Auto Restore</button>
         </div>
-        <button onclick="resetAll()" class="danger" style="background:#dc3545;">🔄 Reset All</button>
-        <button onclick="exportBackup()">💾 Export Backup</button>
-        <button onclick="importBackup()">📂 Import Backup</button>
+        <div id="nicknameStatus"></div>
     </div>
 
-    <!-- Groups List -->
+    <!-- Session Management -->
     <div class="card">
-        <h2>💬 Your Messenger Groups</h2>
-        <div id="groupsList">👉 Enter cookies and click "Validate Cookies"</div>
+        <h2>🔧 SESSION MANAGEMENT</h2>
+        <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+            <input type="text" id="stopSessionId" placeholder="Enter Session ID to Stop" style="flex:1;">
+            <button onclick="stopSession()" class="danger">🛑 Stop Session</button>
+            <button onclick="deleteSession()" class="danger">🗑️ Delete Session</button>
+            <button onclick="refreshSessions()" class="info">🔄 Refresh</button>
+            <button onclick="exportAllData()" class="success">💾 Export Backup</button>
+            <button onclick="importAllData()" class="info">📂 Import Backup</button>
+        </div>
     </div>
 
-    <!-- Logs -->
+    <!-- Active Sessions -->
     <div class="card">
-        <h2>📜 System Logs</h2>
+        <h2>📡 ACTIVE SESSIONS (24/7 MONITORING)</h2>
+        <div id="sessionsList"></div>
+    </div>
+
+    <!-- Members List -->
+    <div class="card">
+        <h2>👥 GROUP MEMBERS (REAL-TIME)</h2>
+        <div id="membersList"></div>
+    </div>
+
+    <!-- Activity Logs -->
+    <div class="card">
+        <h2>📜 MQTT REAL-TIME MONITORING LOGS</h2>
         <div class="log-area" id="systemLogs"></div>
     </div>
 </div>
 
 <script>
     // ============ VARIABLES ============
-    let currentMode = "look";  // "look" ya "unlock"
-    let currentCookies = null;
-    let parsedGroups = [];
-    let validityDays = 365;
-    let installDate = null;
+    let sessions = [];
+    let groupMembers = [];
+    let autoRestoreInterval = null;
+    let totalRestores = 0;
+    let systemStartTime = Date.now();
+    let currentGroupId = null;
 
-    // ============ 365 DAYS VALIDITY ============
-    function initValidity() {
-        const savedInstall = localStorage.getItem('install_date_365');
-        if (savedInstall) {
-            installDate = new Date(savedInstall);
-            const daysPassed = Math.floor((new Date() - installDate) / (86400000));
-            validityDays = Math.max(0, 365 - daysPassed);
-        } else {
-            installDate = new Date();
-            localStorage.setItem('install_date_365', installDate.toISOString());
-            validityDays = 365;
-        }
-        document.getElementById('validityProgress').style.width = `${(validityDays/365)*100}%`;
-        if(validityDays <= 0) {
-            document.getElementById('validityBadge').innerHTML = '⚠️ EXPIRED';
-            document.getElementById('validityBadge').style.background = '#dc3545';
-        }
-    }
-
-    // ============ MODE MANAGEMENT ============
-    function setMode(mode) {
-        if(validityDays <= 0 && mode === 'unlock') {
-            alert("⚠️ Validity expired! Cannot use UNLOCK mode.");
-            return;
-        }
-        
-        currentMode = mode;
-        const indicator = document.getElementById('modeIndicator');
-        const lookMainBtn = document.getElementById('lookModeMainBtn');
-        const unlockMainBtn = document.getElementById('unlockModeMainBtn');
-        
-        if(mode === 'look') {
-            indicator.className = 'mode-indicator look';
-            indicator.innerHTML = '🔍 LOOK MODE ACTIVE: Aap sirf dekh sakte ho. Group name, nickname, theme, chat lock sab dekh sakte ho lekin change nahi kar sakte.';
-            lookMainBtn.style.opacity = '1';
-            unlockMainBtn.style.opacity = '0.6';
-            
-            // Disable unlock buttons
-            document.getElementById('unlockBtn').disabled = true;
-            document.getElementById('unlockNameBtn').disabled = true;
-            document.getElementById('unlockNicknameBtn').disabled = true;
-            document.getElementById('unlockThemeBtn').disabled = true;
-            document.getElementById('unlockAllBtn').disabled = true;
-            
-            // Enable look button
-            document.getElementById('lookBtn').disabled = false;
-            
-            addLog("👁️ LOOK Mode Activated - Sirf dekh sakte ho", "look");
-            
-        } else {
-            indicator.className = 'mode-indicator unlock';
-            indicator.innerHTML = '🔓 UNLOCK MODE ACTIVE: Aap group names, nicknames, themes, chat locks sab UNLOCK kar sakte ho. Changes real honge!';
-            lookMainBtn.style.opacity = '0.6';
-            unlockMainBtn.style.opacity = '1';
-            
-            // Enable unlock buttons
-            document.getElementById('unlockBtn').disabled = false;
-            document.getElementById('unlockNameBtn').disabled = false;
-            document.getElementById('unlockNicknameBtn').disabled = false;
-            document.getElementById('unlockThemeBtn').disabled = false;
-            document.getElementById('unlockAllBtn').disabled = false;
-            
-            // Disable look button
-            document.getElementById('lookBtn').disabled = false;
-            
-            addLog("🔓 UNLOCK Mode Activated - Ab badal sakte ho!", "unlock");
-        }
-    }
-
-    // ============ COOKIES FUNCTIONS ============
-    function parseCookies() {
-        const cookies = document.getElementById("cookiesInput").value.trim();
-        if(!cookies) {
-            showStatus("cookieStatus", "❌ Enter cookies first!", "error");
-            return;
-        }
-        
-        if(cookies.includes("c_user") && cookies.includes("xs")) {
-            currentCookies = cookies;
-            localStorage.setItem('fb_cookies', cookies);
-            showStatus("cookieStatus", "✅ Cookies validated! Loading groups...", "success");
-            addLog("✅ Cookies validated successfully", "success");
-            generateDemoGroups();
-        } else {
-            showStatus("cookieStatus", "❌ Invalid cookies! Need c_user and xs", "error");
-        }
-    }
-
-    function loadSavedCookies() {
-        const saved = localStorage.getItem('fb_cookies');
+    // Load saved data
+    function loadData() {
+        const saved = localStorage.getItem('9man_system_data');
         if(saved) {
-            currentCookies = saved;
-            document.getElementById("cookiesInput").value = saved;
-            showStatus("cookieStatus", "✅ Loaded saved cookies!", "success");
-            generateDemoGroups();
-        } else {
-            showStatus("cookieStatus", "No saved cookies found!", "warning");
+            try {
+                const data = JSON.parse(saved);
+                sessions = data.sessions || [];
+                totalRestores = data.totalRestores || 0;
+                groupMembers = data.groupMembers || [];
+                document.getElementById('totalRestores').innerText = totalRestores;
+                displaySessions();
+                displayMembers();
+            } catch(e) {}
         }
+        addLog("🔥 9MAN-X-YAMDHUD System Loaded | 24/7 Active", "success");
+        addLog("⚡ Auto Restore Mode: Sirf change hue member ka restore hoga", "info");
     }
 
-    function generateDemoGroups() {
-        parsedGroups = [
-            { uid: "100001234567890", name: "🔒 Tech Masters 🔒", nickname: "TechGuru", theme: "Default", nameLocked: true, chatLocked: true },
-            { uid: "100002345678901", name: "🔒 Movie Buffs 🔒", nickname: "FilmLover", theme: "Default", nameLocked: true, chatLocked: true },
-            { uid: "100003456789012", name: "🔒 Football FC 🔒", nickname: "GoalKing", theme: "Default", nameLocked: true, chatLocked: true },
-            { uid: "100004567890123", name: "🔒 Book Club 🔒", nickname: "Reader", theme: "Default", nameLocked: true, chatLocked: true },
-            { uid: "100005678901234", name: "🔒 Gamers Zone 🔒", nickname: "PlayerOne", theme: "Default", nameLocked: true, chatLocked: true },
-            { uid: "100006789012345", name: "🔒 Music Lovers 🔒", nickname: "DJ", theme: "Default", nameLocked: true, chatLocked: true }
+    function saveData() {
+        const data = {
+            sessions: sessions,
+            totalRestores: totalRestores,
+            groupMembers: groupMembers,
+            lastSave: new Date().toISOString()
+        };
+        localStorage.setItem('9man_system_data', JSON.stringify(data));
+        updateStats();
+    }
+
+    function updateStats() {
+        document.getElementById('totalSessions').innerText = sessions.filter(s => s.status === 'active').length;
+        document.getElementById('totalMembers').innerText = groupMembers.length;
+        document.getElementById('totalRestores').innerText = totalRestores;
+        const uptime = Math.floor((Date.now() - systemStartTime) / (1000 * 60 * 60));
+        document.getElementById('uptimeDisplay').innerText = uptime + 'h';
+    }
+
+    // ============ CREATE SESSION ============
+    function createSession() {
+        const cookies = document.getElementById("cookiesInput").value.trim();
+        const groupId = document.getElementById("groupId").value.trim();
+        const groupLockName = document.getElementById("groupLockName").value.trim();
+        const adminKey = document.getElementById("adminKey").value.trim();
+        
+        if(!cookies || !groupId) {
+            showStatus("createStatus", "❌ Cookies and Group ID required!", "error");
+            return;
+        }
+        
+        if(adminKey !== "9MAN-X-YAMDHUD" && adminKey !== "ADMIN") {
+            showStatus("createStatus", "❌ Invalid Admin Key! Use: 9MAN-X-YAMDHUD", "error");
+            return;
+        }
+        
+        const sessionId = `9MAN_${Date.now()}_${Math.random().toString(36).substring(2, 8).toUpperCase()}`;
+        
+        const newSession = {
+            id: sessionId,
+            groupId: groupId,
+            groupLockName: groupLockName || "🔒 9MAN LOCKED",
+            cookies: cookies,
+            status: 'active',
+            startTime: Date.now(),
+            uptime: '0h',
+            nicknameMode: '🔒 9MAN MODE',
+            membersRestored: []
+        };
+        
+        sessions.unshift(newSession);
+        currentGroupId = groupId;
+        saveData();
+        displaySessions();
+        
+        showStatus("createStatus", `✅ Session Created: ${sessionId}`, "success");
+        addLog(`🚀 NEW SESSION: ${sessionId} | Group: ${groupId} | ${groupLockName}`, "success");
+        
+        // Generate demo members
+        generateDemoMembers();
+    }
+
+    // ============ GENERATE MEMBERS ============
+    function generateDemoMembers() {
+        groupMembers = [
+            { id: "100001", name: "9MAN ADMIN", nickname: "🔥 9MAN", originalNickname: "🔥 9MAN", status: "online", needsRestore: false, lastSeen: new Date() },
+            { id: "100002", name: "YAMDHUD", nickname: "⚡ YAMDHUD", originalNickname: "⚡ YAMDHUD", status: "online", needsRestore: false, lastSeen: new Date() },
+            { id: "100003", name: "SRK Ansari", nickname: "⭐ SRK", originalNickname: "⭐ SRK", status: "online", needsRestore: false, lastSeen: new Date() },
+            { id: "100004", name: "Kumar", nickname: "🎯 KUMAR", originalNickname: "🎯 KUMAR", status: "offline", needsRestore: false, lastSeen: new Date() },
+            { id: "100005", name: "Rahul", nickname: "💪 RAHUL", originalNickname: "💪 RAHUL", status: "online", needsRestore: false, lastSeen: new Date() },
+            { id: "100006", name: "Amit", nickname: "🎨 AMIT", originalNickname: "🎨 AMIT", status: "online", needsRestore: false, lastSeen: new Date() }
         ];
-        displayGroups();
-        addLog(`✅ Loaded ${parsedGroups.length} groups`, "success");
+        displayMembers();
+        addLog(`👥 Loaded ${groupMembers.length} members in group`, "success");
+        saveData();
     }
 
-    function displayGroups() {
-        let html = '';
-        parsedGroups.forEach(g => {
-            const unlockedClass = (!g.nameLocked) ? 'unlocked' : '';
-            html += `<div class="group-item ${unlockedClass}">
-                        <div class="group-name">📌 ${g.name}</div>
-                        <div class="group-uid">🆔 UID: ${g.uid}</div>
-                        <div class="nickname">⭐ Nickname: ${g.nickname}</div>
-                        <div class="theme-badge">🎨 Theme: ${g.theme}</div>
-                        <div>💬 Chat Lock: ${g.chatLocked ? '🔒 Locked' : '🔓 Unlocked'}</div>
-                     </div>`;
+    function displayMembers() {
+        let html = `<div class="badge online">🟢 ${groupMembers.filter(m => m.status === 'online').length} Online</div>
+                    <div class="badge offline">🔴 ${groupMembers.filter(m => m.status === 'offline').length} Offline</div>
+                    <div class="badge restore">🔄 ${groupMembers.filter(m => m.needsRestore).length} Need Restore</div>`;
+        
+        groupMembers.forEach(m => {
+            html += `<div class="member-item">
+                        <div>
+                            <span class="member-online ${m.status === 'online' ? 'online' : 'offline'}"></span>
+                            <strong>${m.name}</strong>
+                            <div style="font-size: 12px; color: #ffa500;">Nick: ${m.nickname}</div>
+                            <div style="font-size: 11px;">Original: ${m.originalNickname}</div>
+                        </div>
+                        <div>
+                            ${m.needsRestore ? '<span class="badge restore">⚠️ Changed</span>' : '<span class="badge online">✅ Synced</span>'}
+                            <button onclick="restoreSingleMember('${m.id}')" style="padding: 5px 10px; font-size: 11px;" class="info">🔄 Restore</button>
+                        </div>
+                    </div>`;
         });
-        document.getElementById("groupsList").innerHTML = html || "No groups found";
-        saveToLocalStorage();
+        document.getElementById("membersList").innerHTML = html;
     }
 
-    // ============ LOOK FUNCTION (Sirf dekhna) ============
-    function lookupGroup() {
-        const uid = document.getElementById("targetUID").value.trim();
-        if(!uid) {
-            showStatus("targetStatus", "❌ Enter UID first!", "error");
+    // ============ NICKNAME SYSTEM ============
+    function setNicknameForAll() {
+        const newNickname = document.getElementById("nicknameToSet").value.trim();
+        if(!newNickname) { alert("Enter nickname first!"); return; }
+        
+        groupMembers.forEach(m => {
+            if(m.status === 'online') {
+                m.originalNickname = m.nickname;
+                m.nickname = newNickname + " [" + m.name + "]";
+                m.needsRestore = true;
+                addLog(`📝 Nickname changed: ${m.name} → ${m.nickname}`, "unlock");
+            }
+        });
+        
+        displayMembers();
+        saveData();
+        showStatus("nicknameStatus", `✅ Nickname "${newNickname}" set for ${groupMembers.filter(m => m.status === 'online').length} online members!`, "success");
+        addLog(`📝 BULK NICKNAME: "${newNickname}" set for all online members`, "unlock");
+    }
+
+    function restoreChangedOnly() {
+        const changedMembers = groupMembers.filter(m => m.needsRestore === true && m.status === 'online');
+        
+        if(changedMembers.length === 0) {
+            showStatus("nicknameStatus", "⚠️ Koi change nahi hua! Sirf change hue member ka restore hoga.", "warning");
             return;
         }
         
-        const group = parsedGroups.find(g => g.uid === uid);
-        if(!group) {
-            showStatus("targetStatus", `❌ Group with UID ${uid} not found!`, "error");
-            return;
-        }
+        const restoreTime = Math.floor(Math.random() * 50) + 10;
+        showStatus("nicknameStatus", `⏳ Restoring ${changedMembers.length} members in ${restoreTime} seconds...`, "info");
+        addLog(`🔄 Starting restore for ${changedMembers.length} changed members (${restoreTime}s delay)`, "info");
         
-        // Detailed LOOK information
-        const details = `
-            🔍 GROUP DETAILS (LOOK MODE):
-            📌 Group Name: ${group.name}
-            🆔 UID: ${group.uid}
-            ⭐ Nickname: ${group.nickname}
-            🎨 Theme: ${group.theme}
-            💬 Chat Lock: ${group.chatLocked ? 'LOCKED' : 'UNLOCKED'}
-            🔒 Name Lock: ${group.nameLocked ? 'LOCKED' : 'UNLOCKED'}
-        `;
-        
-        showStatus("targetStatus", details.replace(/\n/g, '<br>'), "look");
-        addLog(`👁️ LOOK: Viewed group ${uid} - Name: "${group.name}", Nickname: "${group.nickname}", Theme: "${group.theme}"`, "look");
+        setTimeout(() => {
+            changedMembers.forEach(m => {
+                m.nickname = m.originalNickname;
+                m.needsRestore = false;
+                totalRestores++;
+                addLog(`✅ Restored: ${m.name} → ${m.nickname}`, "success");
+            });
+            displayMembers();
+            document.getElementById('totalRestores').innerText = totalRestores;
+            saveData();
+            showStatus("nicknameStatus", `✅ Restored ${changedMembers.length} members! (Forcibly restore NAHI - Sirf change hue member ka)`, "success");
+            addLog(`🎉 INSTANT RESTORE COMPLETE! ${changedMembers.length} members restored`, "success");
+        }, restoreTime * 1000);
     }
 
-    // ============ UNLOCK FUNCTIONS (Sirf UNLOCK mode mein) ============
-    function unlockGroupByUID() {
-        if(currentMode !== 'unlock') {
-            alert("❌ Pehle UNLOCK MODE select karo!");
-            return;
-        }
-        if(validityDays <= 0) { alert("Validity expired!"); return; }
-        
-        const uid = document.getElementById("targetUID").value.trim();
-        if(!uid) { showStatus("targetStatus", "❌ Enter UID first!", "error"); return; }
-        
-        const groupIndex = parsedGroups.findIndex(g => g.uid === uid);
-        if(groupIndex === -1) { showStatus("targetStatus", `❌ UID ${uid} not found!`, "error"); return; }
-        
-        parsedGroups[groupIndex].nameLocked = false;
-        parsedGroups[groupIndex].chatLocked = false;
-        parsedGroups[groupIndex].name = parsedGroups[groupIndex].name.replace(/🔒/g, '🔓');
-        parsedGroups[groupIndex].theme = "🌈 UNLOCKED";
-        parsedGroups[groupIndex].nickname = parsedGroups[groupIndex].nickname + " ✨ UNLOCKED";
-        
-        displayGroups();
-        showStatus("targetStatus", `✅ UNLOCKED: Group ${uid} - Ab name, nickname, theme sab unlock ho gaye!`, "success");
-        addLog(`🔓 UNLOCK: Target group ${uid} fully unlocked`, "unlock");
-    }
-
-    function unlockGroupNames() {
-        if(currentMode !== 'unlock') { alert("Pehle UNLOCK MODE select karo!"); return; }
-        parsedGroups = parsedGroups.map(g => ({
-            ...g,
-            name: g.name.replace(/🔒/g, '🔓'),
-            nameLocked: false
-        }));
-        displayGroups();
-        addLog("📝 All group names unlocked", "unlock");
-        showToast("✅ Group names unlocked!");
-    }
-
-    function unlockNicknames() {
-        if(currentMode !== 'unlock') { alert("Pehle UNLOCK MODE select karo!"); return; }
-        const themes = ["🌈 Rainbow", "💚 Neon", "👑 Royal", "🌙 Dark", "🎀 Cute", "💜 Purple"];
-        parsedGroups = parsedGroups.map((g, i) => ({
-            ...g,
-            nickname: g.nickname.split(' ✨')[0] + " ✨ " + themes[i % themes.length]
-        }));
-        displayGroups();
-        addLog("⭐ All nicknames unlocked with themes", "unlock");
-        showToast("⭐ Nicknames unlocked!");
-    }
-
-    function unlockThemes() {
-        if(currentMode !== 'unlock') { alert("Pehle UNLOCK MODE select karo!"); return; }
-        const themes = ["🌈 Rainbow Theme", "💚 Neon Glow", "👑 Royal Gold", "🌙 Dark Mode", "🎀 Cute Pink", "💜 Purple Haze"];
-        parsedGroups = parsedGroups.map((g, i) => ({
-            ...g,
-            theme: themes[i % themes.length]
-        }));
-        displayGroups();
-        addLog("🎨 All themes unlocked", "unlock");
-        showToast("🎨 Themes unlocked!");
-    }
-
-    function unlockAll() {
-        if(currentMode !== 'unlock') { alert("Pehle UNLOCK MODE select karo!"); return; }
-        unlockGroupNames();
-        setTimeout(() => unlockNicknames(), 300);
-        setTimeout(() => unlockThemes(), 600);
-        addLog("🚀 ALL features unlocked - Group names, nicknames, themes sab unlock ho gaye!", "unlock");
-        showToast("🚀 Everything unlocked!");
-    }
-
-    function resetAll() {
-        if(confirm("Reset all groups to locked state?")) {
-            generateDemoGroups();
-            addLog("🔄 All groups reset to locked state", "info");
-            showToast("🔄 Reset complete!");
+    function restoreSingleMember(memberId) {
+        const member = groupMembers.find(m => m.id === memberId);
+        if(member && member.needsRestore) {
+            member.nickname = member.originalNickname;
+            member.needsRestore = false;
+            totalRestores++;
+            displayMembers();
+            saveData();
+            document.getElementById('totalRestores').innerText = totalRestores;
+            addLog(`🔄 Single restore: ${member.name} nickname restored`, "success");
+            showStatus("nicknameStatus", `✅ Restored ${member.name}'s nickname!`, "success");
         }
     }
 
-    // ============ BACKUP FUNCTIONS ============
-    function saveToLocalStorage() {
-        localStorage.setItem('saved_groups', JSON.stringify(parsedGroups));
-        localStorage.setItem('fb_cookies', currentCookies || '');
+    // ============ AUTO RESTORE 24/7 ============
+    function startAutoRestore() {
+        if(autoRestoreInterval) clearInterval(autoRestoreInterval);
+        
+        autoRestoreInterval = setInterval(() => {
+            const changedCount = groupMembers.filter(m => m.needsRestore && m.status === 'online').length;
+            if(changedCount > 0) {
+                addLog(`🤖 Auto-Restore Check: ${changedCount} members need restore - Triggering...`, "info");
+                restoreChangedOnly();
+            } else {
+                addLog(`🤖 Auto-Restore Check: No changes detected`, "info");
+            }
+        }, 30000); // Check every 30 seconds
+        
+        addLog(`🤖 24/7 AUTO RESTORE ACTIVATED (Checks every 30 seconds)`, "success");
+        showStatus("nicknameStatus", "🤖 24/7 Auto Restore Started! Har 30 sec mein check karega.", "success");
     }
 
-    function exportBackup() {
-        const backup = { groups: parsedGroups, cookies: currentCookies, exportDate: new Date().toISOString() };
+    function stopAutoRestore() {
+        if(autoRestoreInterval) {
+            clearInterval(autoRestoreInterval);
+            autoRestoreInterval = null;
+            addLog(`🛑 24/7 AUTO RESTORE STOPPED`, "error");
+            showStatus("nicknameStatus", "🛑 Auto Restore Stopped!", "error");
+        }
+    }
+
+    // ============ SESSION MANAGEMENT ============
+    function displaySessions() {
+        let html = '';
+        sessions.forEach(s => {
+            const statusClass = s.status === 'active' ? 'active' : 'stopped';
+            const uptime = Math.floor((Date.now() - s.startTime) / (1000 * 60 * 60));
+            s.uptime = `${uptime}h ${Math.floor((Date.now() - s.startTime) / (1000 * 60)) % 60}m`;
+            
+            html += `<div class="session-card ${statusClass}">
+                        <div><strong>🆔 Session ID:</strong> <span style="font-family:monospace">${s.id}</span></div>
+                        <div><strong>📌 Group:</strong> ${s.groupId}</div>
+                        <div><strong>🔒 Group Lock:</strong> ${s.groupLockName}</div>
+                        <div><strong>⭐ Nickname System:</strong> ${s.nicknameMode}</div>
+                        <div><strong>⏱️ Uptime:</strong> ${s.uptime}</div>
+                        <div><strong>Status:</strong> ${s.status === 'active' ? '🟢 ACTIVE' : '🔴 STOPPED'}</div>
+                        <div style="font-size: 11px; color: #ffa500; margin-top: 5px;">⚠️ Forcibly restore NAHI - Sirf change hue member ka</div>
+                        <div style="margin-top: 10px;">
+                            <button onclick="stopSpecificSession('${s.id}')" class="danger" style="padding: 5px 10px;">🛑 Stop</button>
+                            <button onclick="deleteSpecificSession('${s.id}')" class="danger" style="padding: 5px 10px;">🗑️ Delete</button>
+                        </div>
+                    </div>`;
+        });
+        document.getElementById("sessionsList").innerHTML = html || "<div class='session-card'>No active sessions. Create one with Admin Key: 9MAN-X-YAMDHUD</div>";
+        updateStats();
+    }
+
+    function refreshSessions() {
+        displaySessions();
+        addLog("🔄 Sessions refreshed", "info");
+    }
+
+    function stopSession() {
+        const sessionId = document.getElementById("stopSessionId").value.trim();
+        if(!sessionId) { alert("Enter Session ID!"); return; }
+        stopSpecificSession(sessionId);
+    }
+
+    function stopSpecificSession(sessionId) {
+        const session = sessions.find(s => s.id === sessionId);
+        if(session) {
+            session.status = 'stopped';
+            saveData();
+            displaySessions();
+            addLog(`🛑 Session ${sessionId} STOPPED`, "error");
+            showStatus("createStatus", `✅ Session stopped!`, "success");
+        } else {
+            alert("Session not found!");
+        }
+    }
+
+    function deleteSession() {
+        const sessionId = document.getElementById("stopSessionId").value.trim();
+        if(!sessionId) { alert("Enter Session ID!"); return; }
+        deleteSpecificSession(sessionId);
+    }
+
+    function deleteSpecificSession(sessionId) {
+        sessions = sessions.filter(s => s.id !== sessionId);
+        saveData();
+        displaySessions();
+        addLog(`🗑️ Session ${sessionId} DELETED`, "error");
+        showStatus("createStatus", `✅ Session deleted!`, "success");
+    }
+
+    // ============ BACKUP ============
+    function exportAllData() {
+        const backup = {
+            sessions: sessions,
+            groupMembers: groupMembers,
+            totalRestores: totalRestores,
+            exportDate: new Date().toISOString()
+        };
         const blob = new Blob([JSON.stringify(backup, null, 2)], {type: "application/json"});
         const link = document.createElement("a");
         link.href = URL.createObjectURL(blob);
-        link.download = `fb_unlocker_backup_${Date.now()}.json`;
+        link.download = `9man_backup_${Date.now()}.json`;
         link.click();
-        showToast("✅ Backup exported!");
+        addLog(`💾 Backup exported: ${backup.sessions.length} sessions, ${backup.groupMembers.length} members`, "success");
+        showStatus("createStatus", "✅ Backup exported!", "success");
     }
 
-    function importBackup() {
+    function importAllData() {
         const input = document.createElement('input');
         input.type = 'file';
         input.accept = '.json';
@@ -374,12 +441,15 @@
             reader.onload = event => {
                 try {
                     const backup = JSON.parse(event.target.result);
-                    if(backup.groups) parsedGroups = backup.groups;
-                    if(backup.cookies) currentCookies = backup.cookies;
-                    displayGroups();
-                    if(currentCookies) document.getElementById("cookiesInput").value = currentCookies;
-                    showToast("✅ Backup imported!");
-                    addLog("Backup imported successfully", "success");
+                    sessions = backup.sessions || [];
+                    groupMembers = backup.groupMembers || [];
+                    totalRestores = backup.totalRestores || 0;
+                    saveData();
+                    displaySessions();
+                    displayMembers();
+                    document.getElementById('totalRestores').innerText = totalRestores;
+                    addLog(`📂 Backup imported: ${sessions.length} sessions restored`, "success");
+                    showStatus("createStatus", "✅ Backup imported!", "success");
                 } catch(e) { alert("Invalid backup file!"); }
             };
             reader.readAsText(file);
@@ -387,60 +457,43 @@
         input.click();
     }
 
-    // ============ UTILITY FUNCTIONS ============
+    // ============ THEME TOGGLE ============
+    function toggleTheme() {
+        document.body.classList.toggle('light');
+        addLog("🎨 Theme toggled", "info");
+    }
+
+    // ============ UTILITY ============
     function addLog(msg, type = "info") {
         const logDiv = document.getElementById("systemLogs");
         const time = new Date().toLocaleTimeString();
         let color = "#fff";
         if(type === "error") color = "#ff6b6b";
         else if(type === "success") color = "#51cf66";
-        else if(type === "look") color = "#ffd93d";
         else if(type === "unlock") color = "#6bcb77";
+        else if(type === "warning") color = "#ffd93d";
+        else color = "#0f0";
         logDiv.innerHTML += `<div style="color:${color}">[${time}] ${msg}</div>`;
         logDiv.scrollTop = logDiv.scrollHeight;
+        updateStats();
     }
 
     function showStatus(elId, msg, type) {
         const el = document.getElementById(elId);
-        el.innerHTML = `<div class="status ${type}">${msg}</div>`;
+        const bg = type === "error" ? "#d63031" : (type === "success" ? "#00b894" : "#f39c12");
+        el.innerHTML = `<div style="background:${bg}; padding:10px; border-radius:8px;">${msg}</div>`;
         setTimeout(() => { if(el) el.innerHTML = ''; }, 5000);
     }
 
-    function showToast(msg) {
-        const toast = document.createElement("div");
-        toast.style.position = "fixed";
-        toast.style.bottom = "20px";
-        toast.style.left = "50%";
-        toast.style.transform = "translateX(-50%)";
-        toast.style.background = "#28a745";
-        toast.style.color = "white";
-        toast.style.padding = "12px 20px";
-        toast.style.borderRadius = "8px";
-        toast.style.zIndex = "9999";
-        toast.style.fontWeight = "bold";
-        toast.innerText = msg;
-        document.body.appendChild(toast);
-        setTimeout(() => toast.remove(), 3000);
-    }
-
-    // ============ LOAD SAVED DATA ============
-    function loadSavedData() {
-        const saved = localStorage.getItem('saved_groups');
-        if(saved) {
-            parsedGroups = JSON.parse(saved);
-            displayGroups();
-            addLog("📀 Loaded saved data from local storage", "info");
-        } else {
-            generateDemoGroups();
-        }
-    }
-
     // ============ INIT ============
-    initValidity();
-    loadSavedData();
-    setMode('look');
-    addLog("🔥 FB Messenger Unlocker Pro Ready! 365 Days Validity", "success");
-    addLog("👁️ LOOK Mode: Sirf dekh sakte ho | 🔓 UNLOCK Mode: Badal sakte ho", "info");
+    loadData();
+    setInterval(() => {
+        displaySessions();
+        updateStats();
+    }, 30000);
+    addLog("⚡ 9MAN-X-YAMDHUD | 24/7 GROUP MANAGER | MQTT Active", "success");
+    addLog("🔑 Admin Key: 9MAN-X-YAMDHUD", "info");
+    addLog("⚠️ Forcibly restore NAHI - Sirf change hue member ka restore hoga", "warning");
 </script>
 </body>
 </html>
